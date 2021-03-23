@@ -1,0 +1,27 @@
+stdent page
+
+
+to student dash
+http://localhost:3001/login_student/mm/mm
+
+
+
+for test result
+
+http://localhost:3001/dashboard_student/tests_list
+
+
+
+http://localhost:3001/logout
+
+admin page
+
+to admin dash
+http://localhost:3001/login_testsetter/m/m
+
+
+
+for set quiz
+http://localhost:3001/create
+
+

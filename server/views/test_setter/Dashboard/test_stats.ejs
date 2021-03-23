@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Test Satistics</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="/stylesheets/Dashboard/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="/stylesheets/Dashboard/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/stylesheets/Dashboard/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project
+    <link href="assets/css/demo.css" rel="stylesheet" />  -->
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/Dashboard/pe-icon-7-stroke.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="azure" data-image="/img/sidebar-4.jpg">
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                <a class="simple-text">
+                    <%= info.name %>
+                </a>
+            </div>
+
+			<ul class="nav">
+                <li>
+                    <a href="/dashboard_testsetter">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard_testsetter/user_profile">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/dashboard_testsetter/tests_list">
+                        <i class="pe-7s-note2"></i>
+                        <p>Tests</p>
+                    </a>
+                </li>
+				<li  class="active">
+					<a href="/dashboard_testsetter/test_stats">
+						<i class="pe-7s-note"></i>
+						<p>Test Statistics</p>
+					</a>
+				</li>
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Test Statistics</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/logout">
+                                Log out
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Test Statistics</h4>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>ID</th>
+                                        <th>Name</th>
+										<th>Statistics</th>
+                                        <th>Leaderboard</th>
+                                    </thead>
+                                    <tbody>
+										<% for(var i = 0;i<tests_list.length;i++) { %>
+                                        <tr>
+                                        	<td><%= tests_list[i].quizid %></td>
+                                            <td><%= tests_list[i].name %></td>
+                                            <td>
+                                                <a href="#" class="statsLink" id="<%=tests_list[i].quizid%>">View Statistics</a>
+                                            </td>
+											<td>
+													<a href="/leaderboard/<%=tests_list[i].quizid%>">View Leaderboard</a>
+											</td>
+                                        </tr>
+										<% } %>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+    <!--   Core JS Files   -->
+    <script src="/js/Dashboard/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="/js/Dashboard/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--  Checkbox, Radio & Switch Plugins -->
+	<script src="/js/Dashboard/bootstrap-checkbox-radio-switch.js"></script>
+
+	<!--  Charts Plugin -->
+	<script src="/js/Dashboard/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="/js/Dashboard/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+	<script src="/js/Dashboard/light-bootstrap-dashboard.js"></script>
+
+	<!-- Light Bootstrap Table DEMO methods, don't include it in your project!
+	<script src="/js/Dashboard/demo.js"></script>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $('.statsLink').click(function(){
+            $.get('/dashboard_testsetter/test_stats/'+$(this).attr('id'),function(response){
+                $('.table').html(response);
+            });
+        });
+    </script>
+
+</html>
