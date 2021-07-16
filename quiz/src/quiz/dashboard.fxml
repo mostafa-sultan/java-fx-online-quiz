@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.DashboardController">
+   <children>
+      <AnchorPane layoutX="-2.0" prefHeight="460.0" prefWidth="281.0" style="-fx-background-color: #1ABC9C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <OctIconView cache="true" cacheHint="ROTATE" fill="WHITE" glyphName="QUESTION" layoutX="128.0" layoutY="94.0" mouseTransparent="true" size="60" wrappingWidth="60.0" />
+            <Label layoutX="40.0" layoutY="55.0" prefHeight="52.0" prefWidth="107.0" text="Quiz" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="87.0" prefHeight="52.0" prefWidth="153.0" text="System" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="205.0" prefHeight="40.0" prefWidth="153.0" text="Welcome ..!!" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="419.0" prefHeight="27.0" prefWidth="94.0" text="Version 1.0" textFill="WHITE" AnchorPane.bottomAnchor="4.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="186.0" layoutY="404.0" lineSpacing="2.0" onAction="#backtodashboard" prefHeight="14.0" prefWidth="78.0" ripplerFill="#76d7c4" style="-fx-background-color: #ffffff; -fx-background-radius: 30px;" text="back" textAlignment="CENTER" textFill="#1abc9c" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="186.0">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="735.0" style="-fx-background-color: #008BFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="table_guizes" layoutX="14.0" layoutY="76.0"  prefHeight="523.0" prefWidth="661.0" style="-fx-background-color: #8F00FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columns>
+                  <TableColumn fx:id="col_quizid" prefWidth="64.0" text="quizid" />
+                  <TableColumn fx:id="col_name" prefWidth="86.0" text="name" />
+                  <TableColumn fx:id="col_start_time" prefWidth="162.0" text="start_time" />
+                  <TableColumn fx:id="col_end_time" prefWidth="151.0" text="end_time" />
+                  <TableColumn fx:id="col_total_marks" prefWidth="82.0" text="total_marks" />
+                  <TableColumn fx:id="col_nom_of_questions" prefWidth="114.0" text="nom_of_questions" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

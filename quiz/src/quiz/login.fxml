@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quiz.LoginController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="269.0" style="-fx-background-color: #1ABC9C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <OctIconView cache="true" cacheHint="ROTATE" fill="WHITE" glyphName="QUESTION" layoutX="128.0" layoutY="94.0" mouseTransparent="true" size="60" wrappingWidth="60.0" />
+            <Label layoutX="40.0" layoutY="55.0" prefHeight="52.0" prefWidth="107.0" text="Quiz" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="71.0" layoutY="87.0" prefHeight="52.0" prefWidth="153.0" text="System" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="205.0" prefHeight="40.0" prefWidth="153.0" text="Welcome ..!!" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="419.0" prefHeight="27.0" prefWidth="94.0" text="Version 1.0" textFill="WHITE" AnchorPane.bottomAnchor="4.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="265.0" prefHeight="464.0" prefWidth="448.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="265.0" AnchorPane.rightAnchor="-13.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="159.0" layoutY="302.0" lineSpacing="2.0" onAction="#login" prefHeight="52.0" prefWidth="145.0" ripplerFill="#76d7c4" style="-fx-background-color: #1ABC9C; -fx-background-radius: 30px;" text="Login" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font name="Arial Bold" size="25.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="178.0" layoutY="34.0" prefHeight="40.0" prefWidth="60.0" text="Quiz" textFill="#1abc9c">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="196.0" layoutY="56.0" prefHeight="40.0" prefWidth="107.0" text="System" textFill="#1abc9c">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Label>
+            <OctIconView cache="true" cacheHint="ROTATE" fill="#1abc9c" glyphName="QUESTION" layoutX="231.0" layoutY="63.0" mouseTransparent="true" size="40" text="" wrappingWidth="53.0" />
+            <JFXTextField fx:id="loginuser" focusColor="#04ad8c" layoutX="127.0" layoutY="152.0" prefHeight="40.0" prefWidth="203.0" promptText="  username" unFocusColor="BLACK" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="118.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="loginpass" focusColor="#04ad8c" layoutX="127.0" layoutY="225.0" prefHeight="30.0" prefWidth="203.0" promptText="password" unFocusColor="BLACK" AnchorPane.leftAnchor="127.0" AnchorPane.rightAnchor="118.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXPasswordField>
+            <FontAwesomeIconView glyphName="USER" layoutX="93.0" layoutY="189.0" size="30" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="331.4285717010498" />
+            <FontAwesomeIconView glyphName="LOCK" layoutX="95.0" layoutY="255.0" size="30" text="" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="333.7142848968506" />
+            <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="400.0" lineSpacing="2.0" onAction="#backtodashboard" prefHeight="14.0" prefWidth="78.0" ripplerFill="#76d7c4" style="-fx-background-color: #1ABC9C; -fx-background-radius: 30px;" text="back" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
